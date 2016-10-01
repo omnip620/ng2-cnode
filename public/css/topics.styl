@@ -1,0 +1,68 @@
+.topics
+  list-style none
+  & > li
+    width 100%
+    padding 10px 6px
+    position relative
+    border-radius 1px
+    &:hover
+      background-color #eee
+
+    & > .count
+      width 60px
+    & > .tab
+      position relative
+      bottom 2px
+      padding 2px 4px
+      background-color lightness($secondaryFontColor, 90%)
+      color lightness($secondaryFontColor, 30%)
+      margin-right 4px
+      &.top
+        background-color green
+        color $primaryFontColor
+      &.good
+        background-color lightness(#0000FF, 60%)
+        color $primaryFontColor
+
+    & > .count, & > .tab
+      display inline-block
+      font-size .7rem
+      border-radius 1px
+
+    & > a
+      position relative
+      display inline-block
+      bottom -5px
+      color $secondaryFontColor
+      font-size 1.15rem
+      text-decoration none
+      width 70%
+      text-overflow ellipsis
+      white-space nowrap
+      overflow hidden
+    & > img
+      width 30px
+      height 30px
+      border-radius 2px
+    & > .time
+      position relative
+      display inline-block
+      bottom -7px
+      float right
+      font-size .7rem
+
+.topics-filter
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1.4em;
+  -webkit-padding-start: 40px;
+
+  & > a
+    color lightness($secondaryFontColor, 20%)
+    padding 2px 4px
+    border-radius 2px
+    text-decoration none
+    &.active
+      background-color $primaryColor
+      color $primaryFontColor
+
