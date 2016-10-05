@@ -6,7 +6,7 @@ import {Component, OnInit} from "@angular/core";
 import {Http} from "@angular/http";
 import {ActivatedRoute, Params} from '@angular/router';
 import {Location}               from '@angular/common';
-const timeago = require("timeago.js");
+import * as moment from 'moment'
 
 import 'rxjs/add/operator/toPromise';
 
@@ -14,17 +14,17 @@ import 'rxjs/add/operator/toPromise';
   templateUrl: 'topic.component.html'
 })
 export class TopicComponent implements OnInit {
-  topic: any;
-  id: string;
-  loading: boolean = true;
+  topic:any;
+  id:string;
+  loading:boolean = true;
+  moment = moment;
 
-
-  constructor(private http: Http, private route: ActivatedRoute, private location: Location) {
+  constructor(private http:Http, private route:ActivatedRoute, private location:Location) {
 
   }
 
   ngOnInit() {
-    this.route.params.forEach((params: Params) => {
+    this.route.params.forEach((params:Params) => {
       this.id = params['id'];
       this.fetchData().then(data=>this.topic = data)
     });

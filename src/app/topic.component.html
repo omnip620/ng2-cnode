@@ -1,5 +1,7 @@
-<div>
-  <span *ngIf="topic">
-    {{topic.title}}
+<span *ngIf="loading">
+    loading...
   </span>
+<div class="topic" *ngIf="!loading">
+  <h3 class="title">{{topic.title}}</h3>
+  <i class="icon-calendar">{{moment(topic.create_at).format('MM-DD HH:mm')}}</i>
 </div>
