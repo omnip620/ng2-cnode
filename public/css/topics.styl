@@ -65,13 +65,30 @@
       background-color $primaryColor
       color $primaryFontColor
 
-
 .topic
-  &>.title
+  & > .title
     text-align center
-  &>.info
+  & > .info
     text-align center
-    span  
+    span
       margin-right 4px
     [class^="icon-"]
       margin-right 2px
+  & > .content
+    letter-spacing -0.003em
+    color lightness($secondaryFontColor, 22.5%)
+    p
+      position relative
+    img
+      max-width 90%
+      position relative
+      left: 50%;
+      transform: translate(-50%,0);
+    p, li
+      line-height 1.5em
+  blockquote
+    margin-left -8px
+    padding-left 4px
+    font-style italic
+    border-left 3px solid rgba(0, 0, 0, .8);
+
