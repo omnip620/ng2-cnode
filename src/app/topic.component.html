@@ -3,5 +3,10 @@
   </span>
 <div class="topic" *ngIf="!loading">
   <h3 class="title">{{topic.title}}</h3>
-  <i class="icon-calendar">{{moment(topic.create_at).format('MM-DD HH:mm')}}</i>
+  <div class="info">
+    <span class="font-smaller"><i class="icon-user"></i>{{topic.author.loginname}}</span>
+    <span class="font-smaller"><i class="icon-calendar"></i>{{moment(topic.create_at).format('MM-DD HH:mm')}}</span>
+  </div>
+  <div class="content" [innerHTML]="md.render(topic.content)">
+  </div>
 </div>

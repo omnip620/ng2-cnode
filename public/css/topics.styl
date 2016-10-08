@@ -53,9 +53,8 @@
 
 .topics-filter
   list-style-type: disc;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1.4em;
-  -webkit-padding-start: 40px;
+  margin-left 40px
+  margin-top 1em
 
   & > a
     color lightness($secondaryFontColor, 20%)
@@ -66,3 +65,13 @@
       background-color $primaryColor
       color $primaryFontColor
 
+
+.topic
+  &>.title
+    text-align center
+  &>.info
+    text-align center
+    span  
+      margin-right 4px
+    [class^="icon-"]
+      margin-right 2px
