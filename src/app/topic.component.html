@@ -1,12 +1,32 @@
-<span *ngIf="loading">
-    loading...
-  </span>
+<div class="loader-inner-wrap" *ngIf="loading">
+  <div class="loader-inner ball-scale-multiple">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
 <div class="topic" *ngIf="!loading">
   <h3 class="title">{{topic.title}}</h3>
   <div class="info">
     <span class="font-smaller"><i class="icon-user"></i>{{topic.author.loginname}}</span>
     <span class="font-smaller"><i class="icon-calendar"></i>{{moment(topic.create_at).format('MM-DD HH:mm')}}</span>
   </div>
+
+  <div class="divider"></div>
+
   <div class="content" [innerHTML]="md.render(topic.content)">
+  </div>
+
+  <div class="divider"></div>
+  <div class="comments">
+    <div class="comment" *ngFor="let comment of topic.replies">
+      <img src="{{comment.author.avatar_url}}" alt="{{comment.author.loginname}}" class="comment-avatar">
+      <small><strong>{{comment.author.loginname}}</strong></small>
+      <small>{{moment(comment.create_at).format('MM-DD HH:mm')}}</small>
+      <div class="comment-content" [innerHtml]="md.render(comment.content)">
+      </div>
+
+      <div class="divider"></div>
+    </div>
   </div>
 </div>

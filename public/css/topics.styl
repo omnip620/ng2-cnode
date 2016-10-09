@@ -52,7 +52,7 @@
       font-size .7rem
 
 .topics-filter
-  list-style-type: disc;
+  list-style-type disc
   margin-left 40px
   margin-top 1em
 
@@ -66,6 +66,9 @@
       color $primaryFontColor
 
 .topic
+  & > .divider
+    margin 1.5rem 0
+    background-color #e8e8e8
   & > .title
     text-align center
   & > .info
@@ -83,12 +86,45 @@
       max-width 90%
       position relative
       left: 50%;
-      transform: translate(-50%,0);
+      transform: translate(-50%, 0);
     p, li
-      line-height 1.5em
+      line-height 1.75rem
   blockquote
     margin-left -8px
     padding-left 4px
     font-style italic
     border-left 3px solid rgba(0, 0, 0, .8);
+
+.comment-avatar
+  border-radius 50%
+  width 20px
+  height 20px
+  vertical-align middle
+
+.comment-content
+  position relative
+  padding-left 1.5rem
+  img
+    max-width 90%
+    position relative
+    left 50%
+    transform translate(-50%, 0)
+
+.comment
+  color lightness($secondaryFontColor, 20%)
+
+  .divider
+    margin 1rem 0
+    background-color #ececec
+
+.loader-inner-wrap
+  display flex
+  flex-direction row
+  justify-content center
+  margin 2.5em 0
+
+.loader-inner > div
+  background-color: lightness($secondaryFontColor, 60%) !important;
+
+
 

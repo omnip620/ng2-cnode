@@ -7,6 +7,7 @@ import {HttpModule} from "@angular/http";
 import {FormsModule} from "@angular/forms";
 import {TabPipe} from "../pipes/tab";
 import {TopicComponent} from "./topic.component";
+import {TopicsService} from "../services/topics";
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {TopicComponent} from "./topic.component";
     TopicComponent,
     TabPipe
   ],
+  providers: [TopicsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
