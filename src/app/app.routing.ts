@@ -7,6 +7,7 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {TopicsComponent} from "./topics.component";
 import {TopicComponent} from "./topic.component";
+import {UserComponent} from "./user.component";
 
 const appRoutes: Routes = [
   {
@@ -15,6 +16,9 @@ const appRoutes: Routes = [
   }, {
     path: 'topic/:id',
     component: TopicComponent
+  }, {
+    path: 'user/:id',
+    component: UserComponent
   }
 ]
 

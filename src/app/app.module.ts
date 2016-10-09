@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import {TabPipe} from "../pipes/tab";
 import {TopicComponent} from "./topic.component";
 import {TopicsService} from "../services/topics";
+import {UserComponent} from "./user.component";
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {TopicsService} from "../services/topics";
     AppComponent,
     TopicsComponent,
     TopicComponent,
+    UserComponent,
     TabPipe
   ],
   providers: [TopicsService],
