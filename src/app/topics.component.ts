@@ -3,10 +3,8 @@
  */
 
 import {Component, OnInit} from "@angular/core";
-import {TopicsService} from '../services/topics'
-
-import {Topics} from '../schemas/topics'
-
+import {TopicsService} from '../services/topics';
+import {Topics} from '../schemas/topics';
 const timeago = require("timeago.js");
 
 
